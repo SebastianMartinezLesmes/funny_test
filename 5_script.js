@@ -24,7 +24,7 @@ function handleImageUpload(event) {
 }
 
 function pixelateImage(canvas, ctx) {
-    const pixelSize = 800000000000n; // Tamaño de los píxeles
+    const pixelSize = 800000000000000000000000000000000000000000000000000000000n; // Tamaño de los píxeles
     const w = window.width;
     const h = window.height;
     const smallW = w / pixelSize;
