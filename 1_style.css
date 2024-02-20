@@ -1,0 +1,109 @@
+#content_all {
+    background-color: #f7f9f9; /* Un tono de blanco para el fondo */
+    padding: 20px;
+    height: 870px;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: height 9s;
+
+    #content1 {
+        background-color: #64df4b; /* Verde brillante */
+        width: 70%;
+        height: 50%;
+        z-index: 2;
+        position: absolute;
+        animation: slideDown 1s ease 0s forwards; /* Animación de desplazamiento hacia abajo después de 2 segundos */
+    }
+    
+    #content2 {
+        background-color: #2ecc71; /* Verde esmeralda */
+        margin-right: 400px;
+        width: 25%;
+        height: 90%;
+        z-index: 3;
+        animation: slideDown 2s ease 0s forwards; /* Animación de desplazamiento hacia abajo después de 2 segundos */
+    }
+    
+    #content3 {
+        background-color: #28b463; /* Verde bosque */
+        margin-left: 400px;
+        width: 35%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        animation: slideDown 3s ease 0s forwards; /* Animación de desplazamiento hacia abajo después de 2 segundos */
+    }
+    
+    #content4 {
+        background-color: #82e0aa; /* Verde menta */
+        border-radius: 10px;
+        margin-top: 8%;
+        width: 30%;
+        padding: 2%;
+        z-index: 4;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+
+        animation: slideDown 4s ease 0s forwards; /* Animación de desplazamiento hacia abajo después de 2 segundos */
+
+        form {
+            text-align: center;
+            width: 100%;
+
+            .input-group {
+                margin-bottom: 20px; 
+            }
+
+            label {
+                display: block; 
+                margin-bottom: 5px; 
+                font-size: 30px;
+            }
+
+            input {
+                width: 100%; 
+                padding: 10px; 
+                border-radius: 5px; 
+                border: none; 
+                box-sizing: border-box; 
+            }
+
+            button {
+                width: 100%; 
+                padding: 10px; 
+                font-size: 30px;
+
+                border-radius: 5px; 
+                border: none; 
+                background-color: #4CAF50; 
+                color: white; 
+                cursor: pointer; 
+                transition: background-color 0.3s; 
+            }
+
+            button:hover {
+                background-color: #45a049; 
+            }
+
+        }
+    }
+}
+
+#content_all.show {
+    height: 870px; /* Cambia la altura a 870px después de 2 segundos */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
