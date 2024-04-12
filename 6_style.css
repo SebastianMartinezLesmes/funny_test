@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    #izquierda{
+        background-color: aqua;
+        width: 50%;
+
+        display: flex;
+        flex-direction: column;
+
+        img{
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
+            margin-left: 24%;
+            width: 50%;
+        }
+    }
+    #derecha{
+        width: 50%;
+
+        #lista_habilidades{
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            div {
+                width: 50%;
+                display: flex;
+
+                p{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
