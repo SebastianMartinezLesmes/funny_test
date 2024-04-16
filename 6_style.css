@@ -2,72 +2,87 @@ body {
     a {
         color: azure;
     }
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     #izquierda {
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
         background-color: rgb(15, 20, 25);
         color: azure;
         width: 50%;
         display: flex;
         flex-direction: column;
-
+        animation: aparecer 8s forwards;  
         #img {
             align-items: center;
             text-align: center;
-
+            animation: agrandar 7s forwards 1s; 
             img {
+                opacity: 0;
                 align-items: center;
                 width: 300px;
                 margin-top: 2%;
                 border-radius: 50%;
+                animation: girar 7s forwards 1s; 
             }
         }
-
         h2 {
             text-align: center;
             margin-left: 24%;
             width: 50%;
         }
+        div{
+            opacity: 0;
+            animation: moverDerecha 8s forwards; 
+            p{
+                a{
+                    display: flex;
+                    align-items: center;
+                    opacity: 0;
+                    margin-left: 10px;
+                    animation: aparecer 2s forwards 6s;
+                    img{
+                        margin-right: 8px;
+                        border-radius: 50%;
+                        width: 50px;
+                    }
+                    img:hover{
+                        border: solid 3px white;
+                    }
+                }
+            }
+        }
     }
-
     #derecha {
         width: 50%;
-
+        opacity: 0;
+        animation: aparecer 8s forwards 7s; 
         h1 {
             margin-left: 4%;
         }
-
         h2 {
             margin-left: 5%;
         }
-
         h3 {
             margin-left: 8%;
         }
-
         section {
             p {
                 margin-left: 3%;
             }
         }
-
         #lista_habilidades {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
             align-items: center;
-
             div {
                 text-align: center;
                 width: 90%;
                 display: flex;
                 padding: 10px;
-
                 p {
                     border-radius: 10px;
                     border: solid 1px blue;
@@ -77,7 +92,6 @@ body {
                 }
             }
         }
-
         #language-list {
             display: flex;
             flex-wrap: wrap;
@@ -95,22 +109,68 @@ body {
                 width: calc(33.33% - 10px);
             }
         }
-
         #len_simples, #len_complejos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             list-style-type: none;
             padding: 3px;
-
             p {
                 text-align: center;
                 background-color: lightblue;
                 border: 1px solid blue;
+                border-radius: 5px;
                 padding: 20px;
                 margin: 5px;
                 width: calc(33.33% - 10px);
             }
         }
+    }
+}
+
+/* Animaciones */
+@keyframes aparecer {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+@keyframes agrandar {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg); 
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg); 
+        opacity: 1;
+    }
+}
+
+@keyframes moverDerecha {
+    0% {
+        transform: translateX(-50%); 
+        opacity: 0;
+    }
+    15%{
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(5%); 
+        opacity: 1;
     }
 }
