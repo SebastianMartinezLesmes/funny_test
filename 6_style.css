@@ -11,15 +11,15 @@ body {
         color: azure;
     }
     #izquierda {
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
         background-color: rgb(15, 20, 25);
         color: azure;
         width: 50%;
         display: flex;
         flex-direction: column;
         animation: aparecer 8s forwards;  
+        margin-right: 8px;
         #img {
             align-items: center;
             text-align: center;
@@ -27,7 +27,7 @@ body {
             img {
                 opacity: 0;
                 align-items: center;
-                width: 300px;
+                width: 200px;
                 margin-top: 2%;
                 border-radius: 50%;
                 animation: girar 7s forwards 1s; 
