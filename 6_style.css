@@ -1,10 +1,15 @@
 body {
-    a {
-        color: azure;
-    }
+    width: 816px; 
+    height: 1056px; 
+    margin: 0; 
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    a {
+        color: azure;
+    }
     #izquierda {
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
@@ -65,64 +70,44 @@ body {
         h2 {
             margin-left: 5%;
         }
-        h3 {
-            margin-left: 8%;
+        h3{
+            margin-left: 2px;
+            align-items: center;
+        }
+        h4 {
+            margin-left: 11%;
         }
         section {
             p {
                 margin-left: 3%;
             }
         }
-        #lista_habilidades {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            align-items: center;
-            div {
-                text-align: center;
-                width: 90%;
-                display: flex;
-                padding: 10px;
-                p {
-                    border-radius: 10px;
-                    border: solid 1px blue;
-                    background-color: lightblue;
-                    padding: 15px;
-                    width: 40%;
-                }
-            }
-        }
-        #language-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            list-style-type: none;
-            padding: 0;
+        /* aca va el codigo de las habilidades y de los lenguajes */
 
-            li {
-                text-align: center;
-                background-color: lightblue;
-                border: 1px solid blue;
-                border-radius: 5px;
-                padding: 15px;
-                margin: 5px;
-                width: calc(33.33% - 10px);
-            }
-        }
-        #len_simples, #len_complejos {
+        #hab_len{
+            text-align: center;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            list-style-type: none;
-            padding: 3px;
-            p {
-                text-align: center;
-                background-color: lightblue;
-                border: 1px solid blue;
-                border-radius: 5px;
-                padding: 20px;
-                margin: 5px;
-                width: calc(33.33% - 10px);
+
+            #ceparador{
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 1px;
+                background-color: rgb(114, 114, 114);
+            }
+            #idiomas_lenguajes{
+
+                width: 50%;
+                #len_simples{
+                    display: flex;
+                    flex-wrap: wrap;
+                    p{
+                        flex: 0 0 50%; /* Cada elemento ocupará el 50% del ancho */
+                        margin: 0; /* Elimina el margen */
+                        box-sizing: border-box; /* Incluye el padding en el ancho del elemento */
+                        padding: 10px;
+                    }
+                }
             }
         }
     }
