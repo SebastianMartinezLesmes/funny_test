@@ -1,0 +1,112 @@
+body {
+    background-color: #f0f0f0;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+
+#izquierda {
+    width: 30%;
+    height: 100%;
+    padding: 30px;
+    background-color: #b7d7e5; 
+    border: solid 2px #333333;
+    border-right: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    width: 100%; 
+    padding: 10px; 
+    background-color: #f0d8f7af; 
+    border-radius: 10px; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-image: linear-gradient(to right, #ffb3b3, #ffd966, #b3e6b3, #85e085, #80b3ff, #bf80ff, #ff6666);
+}
+
+input,
+select {
+    width: 100%;
+}
+
+#derecha {
+    width: 70%;
+    height: 100%;
+    padding: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #b7d7e5; 
+    border: solid 2px #333333;
+    border-left: none;
+}
+
+#contenedor_elemento {
+    border: solid 2px #333333;
+    border-radius: 20px;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#elemento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    text-align: center; 
+}
+
+/* Estilos para las formas */
+#elemento.cuadrado {
+    background-color: #b3a3ff;
+    width: 0cm;
+    height: 0cm;
+}
+
+#elemento.triangulo{
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-top: 150px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+
+#elemento.circulo {
+    border-radius: 50%;
+    font-size: 150%;
+    height: 100px; 
+    width: 0; 
+}
+
+#elemento.rombo {
+    transform: rotate(45deg);
+}
+
+#nombreMensaje {
+    color: red;
+    position: absolute;
+}
+
+@keyframes girar {
+    50% { transform: rotate(360deg); }
+}
+
+@keyframes aparecer {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

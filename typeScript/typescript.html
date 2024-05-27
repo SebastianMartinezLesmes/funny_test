@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"">
+    <title>Controlador pequeño</title>
+    <link rel="stylesheet" href="./typescript.css">
+    <link rel="icon" type="image/png" href="../assets/typescript_logo.png" />
+</head>
+<body>
+    
+    <div id="izquierda">
+        <h1>Panel de control del elemento</h1>
+        <label for="nombre">Ingresa tu nombre:</label>
+        <input type="text" id="nombre">
+        <label for="alto">Alto (cm):</label>
+        <input type="number" id="alto">
+        <label for="ancho">Ancho (cm):</label>
+        <input type="number" id="ancho">
+        <label for="color">Escoje el color del elemento</label>
+        <input type="color" id="color">
+        <label for="borde">¿forma del elemento elemento?</label>
+        <select id="forma">
+            <option value="cuadrado">Cuadrado</option>
+            <option value="triangulo">Triangulo</option>
+            <option value="circulo">Circulo</option>
+            <option value="rombo">Rombo</option>
+        </select>
+        <label for="borde">¿Bordear elemento?</label>
+        <select id="borde">
+            <option value="no">No</option>
+            <option value="si">Si</option>
+        </select>
+        <label for="">Animaciones: </label>
+        <select id="animacion">
+            <option value="nada">Sin animación</option>
+            <option value="girar">Girar</option>
+            <option value="aparecer">Aparecer</option>
+        </select>
+        <br>
+        <button id="aplicar">Aplicar</button>
+    </div>
+
+    <div id="derecha">
+        <h1>espacio a controlar</h1>
+        <div id="contenedor_elemento">
+            <div id="elemento" class="triangulo"></div>
+            <div id="nombreMensaje"></div>
+        </div>
+    </div>
+    
+    <script src="./typescript.js"></script>
+</body>
+</html>
