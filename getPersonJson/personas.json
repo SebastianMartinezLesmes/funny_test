@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellidos": "Pérez López",
+        "edad": 30,
+        "ciudad_origen": "Madrid"
+    },
+    {
+        "id": 2,
+        "nombre": "María",
+        "apellidos": "Gómez Fernández",
+        "edad": 25,
+        "ciudad_origen": "Barcelona"
+    },
+    {
+        "id": 3,
+        "nombre": "Luis",
+        "apellidos": "Rodríguez Martínez",
+        "edad": 28,
+        "ciudad_origen": "Valencia"
+    },
+    {
+        "id": 4,
+        "nombre": "Ana",
+        "apellidos": "Sánchez García",
+        "edad": 32,
+        "ciudad_origen": "Sevilla"
+    },
+    {
+        "id": 5,
+        "nombre": "Carlos",
+        "apellidos": "Martínez Ruiz",
+        "edad": 27,
+        "ciudad_origen": "Bilbao"
+    }
+]
