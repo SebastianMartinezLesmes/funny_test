@@ -1,11 +1,16 @@
 /* Estilo del cuerpo */
 body {
     background: black; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
 }
 
 /* Estilo del div principal */
 div {
-    margin: 36%;
     background: #b1060f; 
     height: 250px;
     width: 60px;
