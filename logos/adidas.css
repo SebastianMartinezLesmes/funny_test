@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+div {
+    position: relative;
+    background: black;
+    height: 140px;
+    width: 45px;
+    top: -40px;
+    left: 180px;
+    transform: rotate(-15deg);
+}
+
+div::before {
+    content: "";
+    position: absolute;
+    background: black;
+    height: 120px;
+    width: 45px;
+    top: 10px;
+    left: -60px;
+}
+
+div::after {
+    content: "";
+    position: absolute;
+    background: black;
+    height: 100px;
+    width: 45px;
+    top: 20px;
+    left: -120px;
+}
+
+span {
+    position: relative; 
+    background: white;
+    width: 200px;
+    height: 100px;
+    top: 20px;
+}
