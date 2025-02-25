@@ -1,0 +1,53 @@
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+}
+
+.react-logo {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+#orbit-1, #orbit-2, #orbit-3 {
+    position: absolute;
+    border: 10px solid #61dafb;
+    border-radius: 50%;
+    width: 200px;
+    height: 50px;
+}
+
+#orbit-1 {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(35deg);
+}
+
+#orbit-2 {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+#orbit-3 {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-35deg);
+}
+
+#core {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #61dafb;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
