@@ -1,0 +1,239 @@
+body {
+    background: rgba(0, 0, 0, 0.815);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sistema-solar {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#sol {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: radial-gradient(circle, #ffeb3b 20%, #ff9800 70%, #ff5722 100%);
+    box-shadow: 0 0 50px 20px rgba(255, 165, 0, 0.8), 
+                0 0 100px 40px rgba(255, 140, 0, 0.6),
+                0 0 150px 60px rgba(255, 69, 0, 0.4);
+    animation: sol_pulso 3s infinite alternate, sol_chispa 1.9s infinite;
+}
+
+.orbita_1, .orbita_2, .orbita_3, .orbita_4, .orbita_5, .orbita_6, .orbita_7, .orbita_8, .orbita_9 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Órbitas escaladas */
+.orbita_1 { width: 220px; height: 220px; }
+.orbita_2 { width: 300px; height: 300px; }
+.orbita_3 { width: 400px; height: 400px; }
+.orbita_4 { width: 520px; height: 520px; }
+.orbita_5 { width: 700px; height: 700px; }
+.orbita_6 { width: 850px; height: 850px; }
+.orbita_7 { width: 1000px; height: 1000px; }
+.orbita_8 { width: 1200px; height: 1200px; }
+.orbita_9 { width: 1400px; height: 1400px; }
+
+/* Caracteristicas de los planetas */
+#mercurio {
+    background: linear-gradient(45deg, #8B7D7B, #4B2E2E);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_mercurio 4s linear infinite;
+}
+
+#venus {
+    background: linear-gradient(45deg, #E3C16F, #D4A76A);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_venus 6s linear infinite;
+}
+
+#tierra {
+    background: linear-gradient(75deg, #1082f5, #32cd32);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_tierra 10s linear infinite;
+}
+#luna {
+    background: linear-gradient(75deg, grey, rgb(134, 132, 132), white, white);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    animation: orbitar_luna 2.7s linear infinite;
+}
+
+#marte {
+    background: linear-gradient(70deg, #f57710, #f00e0e);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_marte 15s linear infinite;
+}
+
+#jupiter {
+    background: linear-gradient(40deg, #f57710, #ffd000, #ff5e00e8);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_jupiter 30s linear infinite;
+}
+
+#saturno {
+    background: linear-gradient(50deg, #e0834d, #ff7300, #e0834d);
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_saturno 42s linear infinite;
+}
+#saturno::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(20deg);
+}
+
+#urano {
+    background: linear-gradient(70deg, #b0e0e6, #54a6c2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_urano 49s linear infinite;
+}
+
+#neptuno {
+    background: linear-gradient(70deg, #4363d8, #1e90ff);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_neptuno 53s linear infinite;
+}
+
+#pluton {
+    background: linear-gradient(70deg, #d3d3d3, #a9a9a9);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    animation: orbitar_pluton 60s linear infinite;
+}
+
+/* Animaciones */
+@keyframes sol_pulso {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+@keyframes sol_chispa {
+    0% { box-shadow: 0 0 50px 20px rgba(255, 165, 0, 0.8); }
+    100% { box-shadow: 0 0 60px 30px rgba(255, 68, 0, 0.527); }
+}
+
+@keyframes orbitar_mercurio {
+    0% { transform: rotate(0deg) translateX(110px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(110px) rotate(360deg); }
+}
+
+@keyframes orbitar_venus {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(360deg); }
+}
+
+@keyframes orbitar_tierra {
+    0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(200px) rotate(360deg); }
+}
+@keyframes orbitar_luna {
+    0% { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(30px) rotate(360deg); }
+}
+
+@keyframes orbitar_marte {
+    0% { transform: rotate(0deg) translateX(260px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(260px) rotate(360deg); }
+}
+
+@keyframes orbitar_jupiter {
+    0% { transform: rotate(0deg) translateX(350px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(350px) rotate(360deg); }
+}
+
+@keyframes orbitar_saturno {
+    0% { transform: rotate(0deg) translateX(425px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(425px) rotate(360deg); }
+}
+
+@keyframes orbitar_urano {
+    0% { transform: rotate(0deg) translateX(500px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(500px) rotate(360deg); }
+}
+
+@keyframes orbitar_neptuno {
+    0% { transform: rotate(0deg) translateX(600px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(600px) rotate(360deg); }
+}
+
+@keyframes orbitar_pluton {
+    0% { transform: rotate(0deg) translateX(700px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(700px) rotate(360deg); }
+}
