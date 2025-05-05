@@ -1,85 +1,93 @@
-body{
-    background: black;
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('https://thefreegfx.com/wp-content/uploads/2021/08/Electronic-Circuit-Board-digital-Infinite-Looped-background-video-3.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
-#world{
-    background: url('https://thefreegfx.com/wp-content/uploads/2021/08/Electronic-Circuit-Board-digital-Infinite-Looped-background-video-3.jpg');
+
+#world {
     filter: hue-rotate(350deg);
     display: flex;
-    height: 950px;
-    flex-direction: row;
-    justify-content: center;   
-    animation: appearFromLeft 8s forwards;
-
-    #div2{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        animation: appearFromRight 8s forwards;
-
-        #map{
-            padding: 3px;
-            margin-right: 500px;
-            background-color: rgb(153,0,51);
-            width: 380px;
-            height: 380px;
-            border-radius: 50%;
-            animation: rotateMap 5s linear infinite;
-            position: absolute;
-            z-index: 1;
-        }
-
-        form{
-            margin-left: 350px;
-            width: 600px;
-            height: 280px;
-            background-color: black;
-            border: solid 4px rgb(153,0,51);
-            border-radius: 10px;
-            text-align: center;
-            
-            .input-group {
-                margin-bottom: 30px;
-                margin-left: 50px;
-            }
-            
-            input {
-                width: 80%; 
-                padding: 12px; /* Aumenta el relleno del input */
-                border-radius: 10px;
-                border: 3px solid rgb(153,0,51);
-                color: rgb(153,0,51);
-                background-color: transparent;
-                font-size: 25px; 
-            }
-            
-            input:hover {
-                border: 3px solid rgb(0, 4, 255);
-                color: rgb(0, 4, 255);
-            }
-            
-            button {
-                width: 50%;
-                padding: 15px; 
-                margin-top: 10px;
-                margin-left: 70px;
-                border-radius: 10px;
-                background-color: black;
-                color: rgb(153,0,51);
-                font-size: 25px; /* Aumenta el tamaño de la fuente del botón */
-                border: solid 3px rgb(153,0,61);
-                cursor: pointer;
-                transition: border 0.3s;
-            }
-            
-            button:hover {
-                border: 6px solid rgb(0, 4, 255);
-            }
-        }
-    }
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: appearOp 2s forwards;
 }
 
-@keyframes appearFromLeft {
+#div2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    animation: appearFromLeft 2s forwards;
+}
+
+/* Eliminar position:absolute y márgenes grandes */
+#map {
+    margin-right: -100px;
+    background-color: rgb(153, 0, 51);
+    border: solid 4px rgb(153, 0, 51);
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    animation: rotateMap 5s linear infinite;
+    z-index: 1;
+}
+
+form {
+    width: 800px;
+    height: 280px;
+    background-color: black;
+    border: solid 4px rgb(153, 0, 51);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 3px solid rgb(153, 0, 51);
+    color: rgb(153, 0, 51);
+    background-color: transparent;
+    font-size: 25px;
+}
+
+input:hover {
+    border: 3px solid rgb(0, 4, 255);
+    color: rgb(0, 4, 255);
+}
+
+button {
+    width: 50%;
+    padding: 15px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(153, 0, 51);
+    font-size: 25px;
+    border: solid 3px rgb(153, 0, 61);
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+button:hover {
+    border: 6px solid rgb(0, 4, 255);
+    color: rgb(0, 4, 255);
+}
+
+/* Animaciones */
+@keyframes appearOp {
     from {
         opacity: 0;
     }
@@ -88,9 +96,9 @@ body{
     }
 }
 
-@keyframes appearFromRight {
+@keyframes appearFromLeft {
     from {
-        transform: translateX(80%);
+        transform: translateX(-100%);
         opacity: 0;
     }
     to {
