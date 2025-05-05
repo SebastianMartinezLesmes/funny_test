@@ -1,89 +1,111 @@
-body{
-    background: url('https://images-cdn.9gag.com/photo/apgn7XB_700b.jpg');
+body {
+    background: url('https://images-cdn.9gag.com/photo/apgn7XB_700b.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
     display: flex;
-}
-
-#div1{
-    
-    width: 100vw;
-    height: 935px;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-
-    img{
-        position: absolute;
-        z-index: 2;
-        height: 72%;
-        width: 500px;
-        animation: appearFrom 10s infinite;
-    }
-
-    form{
-        position: absolute;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        padding: 20px;
-        margin-top: 350px;
-        align-items: center;
-        background-color: transparent;
-        opacity: 1;
-
-        p{
-            font-size: 35px;
-            color: #fff;
-        }
-        
-        input{
-            width: 90%;
-            padding: 10px;
-            font-size: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            border: solid 3px white;
-            background-color: transparent;
-            color: white;
-        }
-
-        button{
-            width: 80%;
-            padding: 10px;
-            font-size: 25px;
-            border-radius: 10px;
-            border: solid 3px white;
-            background-color: transparent;
-            color: white;
-        }
-    }
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
+#div1 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+/* Imagen del personaje */
+#div1 img {
+    position: absolute;
+    z-index: 1;
+    height: 60vh;
+    width: auto;
+    max-width: 90vw;
+    animation: appearFrom 10s forwards;
+    margin-bottom: 10%;
+}
+
+/* Formulario */
+#div1 form {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    max-width: 400px;
+    padding: 20px;
+    margin-top: 30vh;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+#div1 form p {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#div1 input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+
+#div1 button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#div1 button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Imagen animada flotante */
 #img {
     position: absolute;
     border-radius: 50%;
     animation: slideDown 12s linear infinite;
     width: 80px;
     top: 0;
+    z-index: 5;
 }
+
 @keyframes slideDown {
     0% {
-        top: 0; /* La imagen se desplaza hacia arriba y sale de la pantalla */
+        top: 0;
         left: 0;
         transform: rotate(0deg);
         opacity: 1;
     }
-    30%{
-        opacity: 0;
-    }
-    70%{
+    30%, 70% {
         opacity: 0;
     }
     100% {
-        opacity: 1;
-        top: 80%; /* La imagen vuelve a aparecer desde la parte superior */
+        top: 80%;
         left: 95%;
         transform: rotate(1800deg);
+        opacity: 1;
     }
 }
 
