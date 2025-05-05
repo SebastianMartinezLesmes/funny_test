@@ -1,46 +1,44 @@
-#content_all {
-    background-color: #f7f9f9; /* Un tono de blanco para el fondo */
-    padding: 20px;
-    height: 870px;
-    overflow: hidden; /* Oculta el contenido que se desborda */
+/* body{
+    background-color: blueviolet; Un tono de violeta para el fondo
+} */
 
+#content_all {
+    height: 96vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
     transition: height 9s;
 
     #content1 {
-        background-color: #64df4b; /* Verde brillante */
+        background-color: #64df4b; 
         width: 70%;
         height: 50%;
         z-index: 2;
         position: absolute;
-        animation: slideDown 1s ease 0s forwards; /* Animación de desplazamiento hacia abajo después de 2 segundos */
+        animation: slideDown 1s ease 0s forwards; 
     }
-    
     #content2 {
-        background-color: #2ecc71; /* Verde esmeralda */
+        background-color: #2ecc71; 
         margin-right: 400px;
         width: 25%;
         height: 90%;
         z-index: 3;
-        animation: slideDown 2s ease 0s forwards; /* Animación de desplazamiento hacia abajo después de 2 segundos */
+        animation: slideDown 2s ease 0s forwards; 
     }
-    
     #content3 {
-        background-color: #28b463; /* Verde bosque */
+        background-color: #28b463; 
         margin-left: 400px;
         width: 35%;
         height: 100%;
         z-index: 1;
         position: absolute;
-        animation: slideDown 3s ease 0s forwards; /* Animación de desplazamiento hacia abajo después de 2 segundos */
+        animation: slideDown 3s ease 0s forwards; 
     }
-    
     #content4 {
-        background-color: #82e0aa; /* Verde menta */
+        background-color: #82e0aa;
         border-radius: 10px;
-        margin-top: 8%;
+        margin-top: 6%;
         width: 30%;
         padding: 2%;
         z-index: 4;
@@ -49,23 +47,18 @@
         justify-content: center;
         align-items: center;
         font-size: 50px;
-
-        animation: slideDown 4s ease 0s forwards; /* Animación de desplazamiento hacia abajo después de 2 segundos */
-
+        animation: slideDown 4s ease 0s forwards; 
         form {
             text-align: center;
             width: 100%;
-
             .input-group {
                 margin-bottom: 20px; 
             }
-
             label {
                 display: block; 
                 margin-bottom: 5px; 
                 font-size: 30px;
             }
-
             input {
                 width: 100%; 
                 padding: 10px; 
@@ -73,12 +66,10 @@
                 border: none; 
                 box-sizing: border-box; 
             }
-
             button {
                 width: 100%; 
                 padding: 10px; 
                 font-size: 30px;
-
                 border-radius: 5px; 
                 border: none; 
                 background-color: #4CAF50; 
@@ -86,17 +77,15 @@
                 cursor: pointer; 
                 transition: background-color 0.3s; 
             }
-
             button:hover {
                 background-color: #45a049; 
             }
-
         }
     }
 }
 
 #content_all.show {
-    height: 870px; /* Cambia la altura a 870px después de 2 segundos */
+    height: 850px; 
 }
 
 @keyframes slideDown {
