@@ -26,3 +26,11 @@ function ejecutarCodigo(idEditor, idResultado) {
 
   console.log = originalConsoleLog;
 }
+
+function mostrarVentana(lenguaje) {
+  const ventanas = ['html', 'css', 'js'];
+  ventanas.forEach(id => {
+    const div = document.getElementById(`ventana-${id}`);
+    div.style.display = (id === lenguaje) ? 'block' : 'none';
+  });
+}

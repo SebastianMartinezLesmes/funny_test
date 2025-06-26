@@ -7,45 +7,70 @@
 </head>
 <body>
 
-<h2>Ventanas de Código</h2>
+<h2>Guia de programacion basica</h2>
 
-<!-- Primer bloque de código -->
-<div class="bloque">
-  <div class="izquierda">
-    <h3>Código 1:</h3>
-    <textarea id="editor1">// Ejemplo 1
-function saludar() {
-  console.log("Hola, mundo!");
-}
-saludar();</textarea>
-    <br>
-    <button onclick="copiarCodigo('editor1')">Copiar código</button>
-    <button onclick="ejecutarCodigo('editor1', 'resultado1')">Ejecutar</button>
-  </div>
-  <div class="derecha">
-    <h3>Resultado:</h3>
-    <div id="resultado1" class="resultado"></div>
-  </div>
+<header>
+  <button onclick="mostrarVentana('html')">HTML</button>
+  <button onclick="mostrarVentana('css')">CSS</button>
+  <button onclick="mostrarVentana('js')">JavaScript</button>
+</header>
+
+<div id="ventana-html" class="ventana-codigo">
+  <h3>Ventana HTML</h3>
+    <!-- Primer bloque de código -->
+    <div class="bloque">
+    <div class="izquierda">
+        <h3>Código 1:</h3>
+        <textarea id="editor1">
+    // Ejemplo 1
+        function saludar() {
+        console.log("Hola, mundo!");
+        }
+        saludar();
+        </textarea>
+        <br>
+        <button onclick="copiarCodigo('editor1')">Copiar código</button>
+        <button onclick="ejecutarCodigo('editor1', 'resultado1')">Ejecutar</button>
+    </div>
+    <div class="derecha">
+        <h3>Resultado:</h3>
+        <div id="resultado1" class="resultado"></div>
+    </div>
+    </div>
+
+    <!-- Segundo bloque de código -->
+    <div class="bloque">
+        <div class="izquierda">
+            <h3>Código 2:</h3>
+            <textarea id="editor2">// Ejemplo 2
+        let a = 7;
+        let b = 3;
+        console.log("Suma:", a + b);</textarea>
+            <br>
+            <button onclick="copiarCodigo('editor2')">Copiar código</button>
+            <button onclick="ejecutarCodigo('editor2', 'resultado2')">Ejecutar</button>
+        </div>
+        <div class="derecha">
+            <h3>Resultado:</h3>
+            <div id="resultado2" class="resultado"></div>
+        </div>
+    </div>
 </div>
 
-<!-- Segundo bloque de código -->
-<div class="bloque">
-  <div class="izquierda">
-    <h3>Código 2:</h3>
-    <textarea id="editor2">// Ejemplo 2
-let a = 7;
-let b = 3;
-console.log("Suma:", a + b);</textarea>
-    <br>
-    <button onclick="copiarCodigo('editor2')">Copiar código</button>
-    <button onclick="ejecutarCodigo('editor2', 'resultado2')">Ejecutar</button>
-  </div>
-  <div class="derecha">
-    <h3>Resultado:</h3>
-    <div id="resultado2" class="resultado"></div>
-  </div>
+
+<div id="ventana-css" class="ventana-codigo" style="display:none">
+  <h3>Ventana CSS</h3>
+  <textarea>/* Código CSS aquí */</textarea>
+</div>
+
+
+<div id="ventana-js" class="ventana-codigo" style="display:none">
+  <h3>Ventana JavaScript</h3>
+  <textarea>// Código JavaScript aquí</textarea>
 </div>
 
 <script src="script.js"></script>
+
+
 </body>
 </html>
