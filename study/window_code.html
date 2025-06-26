@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejecutar y Copiar Código</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Ventanas de Código</h2>
+
+<!-- Primer bloque de código -->
+<div class="bloque">
+  <div class="izquierda">
+    <h3>Código 1:</h3>
+    <textarea id="editor1">// Ejemplo 1
+function saludar() {
+  console.log("Hola, mundo!");
+}
+saludar();</textarea>
+    <br>
+    <button onclick="copiarCodigo('editor1')">Copiar código</button>
+    <button onclick="ejecutarCodigo('editor1', 'resultado1')">Ejecutar</button>
+  </div>
+  <div class="derecha">
+    <h3>Resultado:</h3>
+    <div id="resultado1" class="resultado"></div>
+  </div>
+</div>
+
+<!-- Segundo bloque de código -->
+<div class="bloque">
+  <div class="izquierda">
+    <h3>Código 2:</h3>
+    <textarea id="editor2">// Ejemplo 2
+let a = 7;
+let b = 3;
+console.log("Suma:", a + b);</textarea>
+    <br>
+    <button onclick="copiarCodigo('editor2')">Copiar código</button>
+    <button onclick="ejecutarCodigo('editor2', 'resultado2')">Ejecutar</button>
+  </div>
+  <div class="derecha">
+    <h3>Resultado:</h3>
+    <div id="resultado2" class="resultado"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
